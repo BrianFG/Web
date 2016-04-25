@@ -1,0 +1,108 @@
+<%
+/*******************************************************************************
+ * Juego de caballos distribuido
+ * Aplicación de página única (SPA: Single-Page Application).
+ * Copyright (C) 2013-2016 por Ariel Ortiz
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ ******************************************************************************/
+%>
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Juego de caballos</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel="stylesheet" href="/stylesheets/cliente-web-caballos.css" />
+        <link rel="stylesheet" href="/stylesheets/hover.css" />
+
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="node_modules/bootstrap-select/src/.js"></script>
+
+    <script src="/javascripts/cliente-web-caballos.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<style type="text/css">
+  
+
+</style>
+  </head>
+
+  <body>
+  <div class="container">
+
+    <h1>Caballos danzarines</h1>
+    
+    <div id="principal">
+    <input id="creacion-juego" type="button" class="btn btn-sm btn-info" value="Crear Juego"/>
+    <input id="union-juego" type="button" class="btn btn-sm btn-primary" value="Unirse a Partida"/>
+    </div>
+
+    <!-- -->
+
+    <div id="nuevo-juego">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-4" for="nombre_del_juego">Escriba el nombre del juego: </label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="nombre-juego">
+          </div>
+        </div>
+        <div class="form-group"> 
+          <div class="col-sm-offset-4 col-sm-4">
+            <button id="crear-juego" class="btn btn-success">Crear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- -->
+
+
+    <div id="seccion-union">
+      <select class="selectpicker" id="lista-juegos">
+
+      </select>
+      <button class="btn btn-md btn-warning" id="unir-juego">Unirse</button>
+
+    </div>
+
+
+    <div id="juego">
+      <div class="col-xs-12 col-sm-4">
+        <div id="mensaje-juego">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8">
+        <div id="tablero">
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  </body>
+
+</html>
