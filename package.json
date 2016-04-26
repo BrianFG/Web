@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node --harmony ./bin/www",
-    "cliente": "node cliente-texto-gato http://localhost:$PORT"
+    "cliente": "node cliente-texto-caballos http://localhost:$PORT"
   },
   "dependencies": {
     "body-parser": "~1.12.0",

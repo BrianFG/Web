@@ -1,10 +1,7 @@
-# Juego de gato web distribuido
+# Juego de Caballos Danzarines
 
-Esta es una aplicación web de Node que implementa el tradicional juego de gato. Permite que múltiples parejas de jugadores jueguen simultáneamente.
+Esta es una aplicación web de NodeJS que implementa el el juego "Caballos Danzarines". Permite que múltiples parejas de jugadores jueguen simultáneamente.
 
-El software se distribuye bajo la licencia GPL 3. Ver el archivo `gato/licence.txt` para más detalles.
-
-Las instrucciones de este documento son para la plataforma Cloud9.
 
 ## 0. Requisitos
 
@@ -15,35 +12,31 @@ Para poder ejecutarse se requiere tener instalado el siguiente software:
 
 ## 1. Instalación
 
-La aplicación requiere instalar varios módulos de Node. Teclea el siguiente comando desde la terminal dentro del directorio `gato`:
+La aplicación requiere instalar varios módulos de Node. Teclea el siguiente comando desde el directorio `caballos`:
 
       npm install
 
 ## 2. Corriendo los servidores
 
-Primero se debe arrancar el servior de MongoDB. En una terminal teclea:
+Para arrancar el servidor de Mongo se debe escribir lo siguiente en una terminal:
 
       mongod --bind_ip=$IP --nojournal
 
-No es necesario crear explícitamente la base de datos ni las colecciones.
 
-Posteriormente, teclea en otra terminal dentro del directorio `gato` el siguiente comando:
+
+Para iniciar el servidor web, es necesario escribir lo siguiente en la terminal:
 
       npm start
 
-## 3. Corriendo el cliente de texto
+## 3. Cliente de texto
 
-Para correr el cliente de texto (suponiendo que el servidor está corriendo en la misma máquina en el puerto `$PORT`), en una terminal disponible dentro del directorio `gato` teclea lo siguiente:
+Dentro del directorio `caballos` teclea lo siguiente en una terminal(Este comando servirá solo si se esta utilizando la plataforma Cloud9):
 
       npm run-script cliente
 
-o alternativamente:
+Si el anterior comando no funciona ya que no se esta utilizando Cloud9, teclea lo siguiente (cambia `PUERTO` por el puerto en el que el servidor est'e corriendo):
 
-      node cliente-texto-gato.js http://localhost:$PORT
+      node cliente-texto-caballos.js http://localhost:PUERTO
 
-## 4. Corriendo el cliente web
+Para poder ver el juego en acción es necesario abrir otra terminal para abrir un nuevo cliente de texto y jugar contra el anterior creado,
 
-En un navegador, ir al URL: `http://nombre-del-servidor/gato/`. Si se desea jugar en la misma computadora, se requerirán al menos dos navegadores distintos (por ejemplo Firefox y Chromium) o un mismo navegador abriendo una segunda ventana en modo incógnito.
-
-Un mismo juego puede usar un cliente web y el otro cliente de modo texto.
-# Web
